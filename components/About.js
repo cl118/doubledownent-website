@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const About = () => {
   return (
@@ -33,9 +34,16 @@ const About = () => {
           Contact us for more information on DD Entertainment Artist or for
           DJ/Artists wanting to be considered for our roster.
         </p>
-        <button className='text-md md:text-sm lg:text-lg border border-black py-1 px-2 mb-4 sm:mb-8 md:mb-12 rounded-full'>
+        <Link
+          to='roster'
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          className='text-md md:text-sm lg:text-lg cursor-pointer text-white bg-blue-600 hover:bg-blue-400 py-2 px-4 mb-4 sm:mb-8 md:mb-12'
+        >
           Full Roster
-        </button>
+        </Link>
       </div>
     </div>
   );

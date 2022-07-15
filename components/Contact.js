@@ -5,7 +5,7 @@ const Contact = () => {
     <div className='w-full bg-white' id='contact'>
       <div className='max-w-[1240px] px-6 py-24 mx-auto'>
         <div className='flex flex-col text-center w-full mb-12'>
-          <h2 className='text-2xl sm:text-4xl font-bold text-center mb-4'>
+          <h2 className='text-3xl sm:text-5xl font-bold text-center'>
             Contact
           </h2>
           <p className='lg:w-2/3 mx-auto leading-relaxed text-base'>
