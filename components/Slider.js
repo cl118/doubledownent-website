@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import SliderIndicator from './SliderIndicator';
 
-const HeroSlider = ({ slides, autoPlay, delay, children }) => {
+const Slider = ({ slides, autoPlay, delay, children }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = (slideIndex = currentSlide + 1) => {
@@ -21,16 +20,16 @@ const HeroSlider = ({ slides, autoPlay, delay, children }) => {
   }, [currentSlide]);
 
   return (
-    <div className='relative h-screen flex flex-nowrap overflow-x-hidden'>
+    <div className='relative h-full flex flex-nowrap overflow-x-hidden'>
       {slides.map((slide, index) => (
         <div
-          className='h-full w-screen flex-shrink-0 bg-center bg-cover transition-all duration-700 ease-in-out'
+          className='h-full w-full flex-shrink-0 bg-center bg-cover transition-all duration-700 ease-in-out'
           key={index}
           style={{
             backgroundImage: `url(${slide.image})`,
             marginLeft: index === 0 ? `-${currentSlide * 100}%` : undefined,
           }}
-        ></div>
+        />
       ))}
       {/* Gradient */}
       <div className='absolute top-0 left-0 h-full w-full bg-black/70 z-30' />
@@ -59,4 +58,4 @@ const HeroSlider = ({ slides, autoPlay, delay, children }) => {
   );
 };
 
-export default HeroSlider;
+export default Slider;

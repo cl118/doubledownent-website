@@ -31,18 +31,35 @@ const Navbar = () => {
     >
       <div className='max-w-[1240px] mx-auto flex justify-between items-center p-4 text-white'>
         <Link to='hero' spy={true} smooth={true} offset={0} duration={500}>
-          <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>
+          <h1
+            style={{ color: `${textColor}` }}
+            className='font-bold text-4xl cursor-pointer'
+          >
             DDE
           </h1>
         </Link>
         <ul className='hidden sm:flex' style={{ color: `${textColor}` }}>
           <li className='p-4'>
-            <Link to='hero' spy={true} smooth={true} offset={0} duration={500}>
+            <Link
+              to='hero'
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              className='cursor-pointer hover:text-gray-500 hover:border-b-4 hover:border-b-blue-400'
+            >
               Home
             </Link>
           </li>
           <li className='p-4'>
-            <Link to='about' spy={true} smooth={true} offset={0} duration={500}>
+            <Link
+              to='about'
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              className='cursor-pointer hover:text-gray-500 hover:border-b-4 hover:border-b-blue-400'
+            >
               About
             </Link>
           </li>
@@ -53,12 +70,20 @@ const Navbar = () => {
               smooth={true}
               offset={0}
               duration={500}
+              className='cursor-pointer hover:text-gray-500 hover:border-b-4 hover:border-b-blue-400'
             >
               Roster
             </Link>
           </li>
           <li className='p-4'>
-            <Link to='radio' spy={true} smooth={true} offset={0} duration={500}>
+            <Link
+              to='radio'
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              className='cursor-pointer hover:text-gray-500 hover:border-b-4 hover:border-b-blue-400'
+            >
               Radio
             </Link>
           </li>
@@ -69,6 +94,7 @@ const Navbar = () => {
               smooth={true}
               offset={0}
               duration={500}
+              className='cursor-pointer hover:text-gray-500 hover:border-b-4 hover:border-b-blue-400'
             >
               Venues/Partners
             </Link>
@@ -80,6 +106,7 @@ const Navbar = () => {
               smooth={true}
               offset={0}
               duration={500}
+              className='cursor-pointer hover:text-gray-500 hover:border-b-4 hover:border-b-blue-400'
             >
               Contact
             </Link>

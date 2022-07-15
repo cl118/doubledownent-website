@@ -13,15 +13,15 @@ const Roster = () => {
       </div>
 
       {/* Grid of DJs */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 bg-gray-500 w-full'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 bg-gray-500 w-full'>
         {sortedRoster.map((dj, index) => (
           <div
-            className='w-full  h-[275px] sm:h-[250px] md:h-[225px] lg:h-[300px] relative mx-auto'
+            className='w-full h-[275px] sm:h-[250px] md:h-[225px] lg:h-[300px] 2xl:h-[400px] relative mx-auto'
             key={index}
           >
             <Image src={dj.img} layout='fill' objectFit='cover' alt='/' />
-            <div className='absolute top-0 left-0 h-full w-full hover:bg-black/80 z-10' />
-            <div className='z-20 text-white absolute w-[75%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col justify-center items-center'>
+            {/* <div className='absolute top-0 left-0 h-full w-full hover:bg-black/80 z-10' /> */}
+            <div className='absolute top-0 left-0 h-full w-full hover:bg-black/80 z-10 text-transparent hover:text-white flex flex-col justify-center items-center transition duration-200 ease-out'>
               <h3>{dj.name}</h3>
               <p>{dj.bio}</p>
             </div>

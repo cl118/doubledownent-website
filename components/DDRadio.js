@@ -7,8 +7,8 @@ const DDRadio = () => {
       <div>
         <h2 className='text-3xl sm:text-5xl font-bold'>Double Down Radio</h2>
         <p className='p-4 text-sm sm:text-md lg:text-lg leading-tight sm:leading-normal'>
-          Listen every Friday at 11AM EST on SiriusXM Radio or catch up on past
-          episdoes below!
+          Listen every Friday at 11AM EST on SiriusXM Radio or select an app
+          below to catch up on past episodes!
         </p>
       </div>
       {/* <MixcloudPlayer
