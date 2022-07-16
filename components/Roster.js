@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { RosterData } from './RosterData';
+import { AiOutlineInstagram } from 'react-icons/ai';
 
 const sortedRoster = RosterData.sort((a, b) => (a.name > b.name ? 1 : -1));
 
@@ -21,9 +22,12 @@ const Roster = () => {
           >
             <Image src={dj.img} layout='fill' objectFit='cover' alt='/' />
             {/* <div className='absolute top-0 left-0 h-full w-full hover:bg-black/80 z-10' /> */}
-            <div className='absolute top-0 left-0 h-full w-full hover:bg-black/80 z-10 text-transparent hover:text-white flex flex-col justify-center items-center transition duration-200 ease-out'>
-              <h3>{dj.name}</h3>
-              <p>{dj.bio}</p>
+            <div className='absolute top-0 left-0 h-full w-full hover:bg-black/90 z-10 text-transparent hover:text-white hover:border-8 border-blue-600 flex flex-col justify-center items-center transition duration-200 ease-out'>
+              <h3 className='text-3xl pb-2'>{dj.name}</h3>
+              <p className='mt-4'>"{dj.bio}"</p>
+              <a href='/' target='_blank' alt='/'>
+                <AiOutlineInstagram size={20} className='mt-4 cursor-pointer' />
+              </a>
             </div>
           </div>
         ))}

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [bgColor, setBgColor] = useState('transparent');
   const [textColor, setTextColor] = useState('white');
+  const [navLogo, setNavLogo] = useState('/assets/dd-logo-white-small.png');
 
   const handleNav = () => {
     setNav(!nav);
@@ -16,9 +18,11 @@ const Navbar = () => {
       if (window.scrollY >= 90) {
         setBgColor('#fff');
         setTextColor('#000');
+        setNavLogo('/assets/dd-logo-black-small.png');
       } else {
         setBgColor('transparent');
         setTextColor('#fff');
+        setNavLogo('/assets/dd-logo-white-small.png');
       }
     };
     window.addEventListener('scroll', changeColor);
@@ -30,14 +34,17 @@ const Navbar = () => {
       className='fixed left-0 top-0 w-full z-50 ease-in duration-300'
     >
       <div className='max-w-[1240px] mx-auto flex justify-between items-center p-4 text-white'>
-        <Link to='hero' spy={true} smooth={true} offset={0} duration={500}>
-          <h1
-            style={{ color: `${textColor}` }}
-            className='font-bold text-4xl cursor-pointer'
-          >
-            DDE
-          </h1>
-        </Link>
+        <div className='flex items-center'>
+          <Link to='hero' spy={true} smooth={true} offset={0} duration={500}>
+            <Image
+              src={navLogo}
+              height={55}
+              width={70}
+              layout='fixed'
+              objectFit='contain'
+            />
+          </Link>
+        </div>
         <ul className='hidden sm:flex' style={{ color: `${textColor}` }}>
           <li className='p-4'>
             <Link

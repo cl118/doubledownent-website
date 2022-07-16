@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const Services = () => {
   return (
@@ -18,6 +19,16 @@ const Services = () => {
           </h2>
           <div className='h-2 w-10 bg-blue-400 my-4' />
           <p className='text-center'>Some blurb about corporate events</p>
+          <Link
+            to='contact'
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            className='mt-8 px-8 py-2 cursor-pointer bg-blue-600 hover:bg-blue-400'
+          >
+            Book Now
+          </Link>
         </div>
       </div>
       <div className='relative w-full h-[300px] md:h-full'>
@@ -34,6 +45,16 @@ const Services = () => {
           </h2>
           <div className='h-2 w-10 bg-blue-400 my-4' />
           <p className='text-center'>Some blurb about nightlife events</p>
+          <Link
+            to='contact'
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            className='mt-8 px-8 py-2 cursor-pointer bg-blue-600 hover:bg-blue-400'
+          >
+            Book Now
+          </Link>
         </div>
       </div>
       <div className='relative w-full h-[300px] md:h-full'>
@@ -50,6 +71,16 @@ const Services = () => {
           </h2>
           <div className='h-2 w-10 bg-blue-400 my-4' />
           <p className='text-center'>Some blurb about private events</p>
+          <Link
+            to='contact'
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            className='mt-8 px-8 py-2 cursor-pointer bg-blue-600 hover:bg-blue-400'
+          >
+            Book Now
+          </Link>
         </div>
       </div>
     </div>
