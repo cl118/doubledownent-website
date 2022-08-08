@@ -42,7 +42,9 @@ const Home = () => {
       <Navbar />
       <Hero
         heading='Double Down Entertainment'
-        message='Some sort of blurb right here'
+        message={`Philadelphia/South Jersey's Premiere Entertainment Company`}
+        buttonText='Learn More'
+        buttonLink='about'
       />
       <About />
       <Services />

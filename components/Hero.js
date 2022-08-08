@@ -1,10 +1,10 @@
 import React from 'react';
 import Slider from './Slider';
-import { SliderData } from './SliderData';
+import { SliderData } from '../data/SliderData';
 import { Link } from 'react-scroll';
 import { BsChevronDoubleDown } from 'react-icons/bs';
 
-const Hero = ({ heading, message }) => {
+const Hero = ({ heading, message, buttonText, buttonLink }) => {
   return (
     <>
       <div className='w-full h-screen relative' id='hero'>
@@ -13,14 +13,14 @@ const Hero = ({ heading, message }) => {
             <h2 className='text-4xl sm:text-5xl font-bold'>{heading}</h2>
             <p className='py-5 text-xl'>{message}</p>
             <Link
-              to='contact'
+              to={buttonLink}
               spy={true}
               smooth={true}
               offset={0}
               duration={500}
-              className='px-8 py-2 cursor-pointer border hover:bg-blue-600 hover:border-blue-600'
+              className='px-8 py-2 cursor-pointer border hover:bg-blue-600 hover:border-blue-600 active:scale-95'
             >
-              Book
+              {buttonText}
             </Link>
           </div>
         </Slider>

@@ -2,10 +2,13 @@ import React from 'react';
 
 const DDRadio = () => {
   return (
-    <div className='py-24 text-center flex flex-col items-center' id='radio'>
+    <div
+      className='pt-8 md:py-24 text-center flex flex-col items-center bg-gray-200'
+      id='radio'
+    >
       <div>
         <h2 className='text-3xl sm:text-5xl font-bold'>Double Down Radio</h2>
-        <p className='p-4 text-sm sm:text-md lg:text-lg leading-tight sm:leading-normal'>
+        <p className='text-sm sm:text-md lg:text-lg leading-tight sm:leading-normal'>
           Listen every Friday at 11AM EST on SiriusXM Radio or subscribe and
           catch up on past episdoes below!
         </p>

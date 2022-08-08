@@ -6,8 +6,6 @@ import Image from 'next/image';
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [bgColor, setBgColor] = useState('transparent');
-  const [textColor, setTextColor] = useState('white');
-  const [navLogo, setNavLogo] = useState('/assets/dd-logo-white-small.png');
 
   const handleNav = () => {
     setNav(!nav);
@@ -16,13 +14,9 @@ const Navbar = () => {
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
-        setBgColor('#fff');
-        setTextColor('#000');
-        setNavLogo('/assets/dd-logo-black-small.png');
+        setBgColor('#000');
       } else {
         setBgColor('transparent');
-        setTextColor('#fff');
-        setNavLogo('/assets/dd-logo-white-small.png');
       }
     };
     window.addEventListener('scroll', changeColor);
@@ -33,19 +27,19 @@ const Navbar = () => {
       style={{ backgroundColor: `${bgColor}` }}
       className='fixed left-0 top-0 w-full z-50 ease-in duration-300'
     >
-      <div className='max-w-[1240px] mx-auto flex justify-between items-center p-4 text-white'>
+      <div className='max-w-[1240px] mx-auto flex justify-between items-center px-4 py-1 text-white'>
         <div className='flex items-center'>
           <Link to='hero' spy={true} smooth={true} offset={0} duration={500}>
             <Image
-              src={navLogo}
-              height={55}
-              width={70}
+              src='/assets/dd-logo-white-small.png'
+              height={40}
+              width={50}
               layout='fixed'
               objectFit='contain'
             />
           </Link>
         </div>
-        <ul className='hidden sm:flex' style={{ color: `${textColor}` }}>
+        <ul className='hidden sm:flex'>
           <li className='p-4'>
             <Link
               to='hero'
@@ -53,7 +47,7 @@ const Navbar = () => {
               smooth={true}
               offset={0}
               duration={500}
-              className='cursor-pointer hover:text-gray-500 hover:border-b-4 hover:border-b-blue-400'
+              className='cursor-pointer hover:text-gray-400 hover:border-b-4 hover:border-b-blue-400'
             >
               Home
             </Link>
@@ -61,9 +55,10 @@ const Navbar = () => {
           <li className='p-4'>
             <Link
               to='about'
+              activeClass='text-gray-400 border-b-4 border-b-blue-500'
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-60}
               duration={500}
               className='cursor-pointer hover:text-gray-500 hover:border-b-4 hover:border-b-blue-400'
             >
@@ -73,9 +68,10 @@ const Navbar = () => {
           <li className='p-4'>
             <Link
               to='roster'
+              activeClass='text-gray-400 border-b-4 border-b-blue-500'
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-60}
               duration={500}
               className='cursor-pointer hover:text-gray-500 hover:border-b-4 hover:border-b-blue-400'
             >
@@ -85,11 +81,12 @@ const Navbar = () => {
           <li className='p-4'>
             <Link
               to='radio'
+              activeClass='text-gray-400 border-b-4 border-b-blue-500'
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-60}
               duration={500}
-              className='cursor-pointer hover:text-gray-500 hover:border-b-4 hover:border-b-blue-400'
+              className='cursor-pointer hover:text-gray-400 hover:border-b-4 hover:border-b-blue-400'
             >
               Radio
             </Link>
@@ -97,11 +94,12 @@ const Navbar = () => {
           <li className='p-4'>
             <Link
               to='venues'
+              activeClass='text-gray-400 border-b-4 border-b-blue-500'
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-60}
               duration={500}
-              className='cursor-pointer hover:text-gray-500 hover:border-b-4 hover:border-b-blue-400'
+              className='cursor-pointer hover:text-gray-400 hover:border-b-4 hover:border-b-blue-400'
             >
               Venues/Partners
             </Link>
@@ -109,11 +107,12 @@ const Navbar = () => {
           <li className='p-4'>
             <Link
               to='contact'
+              activeClass='text-gray-400 border-b-4 border-b-blue-500'
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-60}
               duration={500}
-              className='cursor-pointer hover:text-gray-500 hover:border-b-4 hover:border-b-blue-400'
+              className='cursor-pointer hover:text-gray-400 hover:border-b-4 hover:border-b-blue-400'
             >
               Contact
             </Link>
@@ -128,7 +127,7 @@ const Navbar = () => {
           {nav ? (
             <AiOutlineClose size={20} />
           ) : (
-            <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
+            <AiOutlineMenu size={20} className='text-white' />
           )}
         </div>
 
