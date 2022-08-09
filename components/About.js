@@ -11,7 +11,7 @@ const About = () => {
       >
         {/* mobile top/tablet+ left */}
         <div className='w-full sm:w-[50%] flex justify-end items-center sm:pl-2 md:pl-4 lg:pl-6'>
-          <Image
+          <img
             src={'/assets/jason-hq2-thursday-dde-sign.jpg'}
             height={400}
             width={600}
