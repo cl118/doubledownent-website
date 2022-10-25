@@ -1,7 +1,7 @@
 export const RosterData = [
   {
     name: 'Jason Weiss',
-    img: '/assets/roster/default-dj.jpg',
+    img: '/assets/roster/jason-weiss-roster-img.png',
     bio: "I'm just here so we won't get fined.",
     fb: 'https://facebook.com/djjasonweiss',
     ig: 'https://instagram.com/djjasonweiss',
@@ -14,13 +14,6 @@ export const RosterData = [
     ig: 'https://instagram.com/djdr1ft',
   },
   {
-    name: 'Montone',
-    img: '/assets/roster/default-dj.jpg',
-    bio: 'Probably made your mom do the Macarena',
-    fb: 'https://facebook.com/djmontone',
-    ig: 'https://instagram.com/djmontone',
-  },
-  {
     name: 'Mike Lowry',
     img: '/assets/roster/mike-lowry-roster-img.png',
     bio: "I'm retired, but this is fun!",
@@ -30,7 +23,7 @@ export const RosterData = [
   {
     name: 'Ryno',
     img: '/assets/roster/ryno-roster-img.png',
-    bio: 'This is a short blurb about the DJ',
+    bio: 'The youngest and definitely the best looking.',
     fb: 'https://facebook.com/_djryno',
     ig: 'https://instagram.com/djryno_',
   },
@@ -43,7 +36,7 @@ export const RosterData = [
   },
   {
     name: 'Fotsbeats',
-    img: '/assets/roster/fots-roster-img.png',
+    img: '/assets/roster/fotsbeats-roster-img.png',
     bio: 'DJ Bad needs a new face.',
     fb: 'https://facebook.com/fotsbeats',
     ig: 'https://instagram.com/fotsbeats',
