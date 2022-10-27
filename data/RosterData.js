@@ -55,11 +55,11 @@ export const RosterData = [
     fb: 'https://facebook.com/djnickspinelli',
     ig: 'https://instagram.com/djnickspinelli',
   },
-  {
-    name: 'Ernesto',
-    img: '/assets/roster/ernesto-roster-img.png',
-    bio: 'This is a short blurb about the DJ',
-    fb: 'https://facebook.com/djernesto1',
-    ig: 'https://instagram.com/djernesto1',
-  },
+  // {
+  //   name: 'Ernesto',
+  //   img: '/assets/roster/ernesto-roster-img.png',
+  //   bio: 'This is a short blurb about the DJ',
+  //   fb: 'https://facebook.com/djernesto1',
+  //   ig: 'https://instagram.com/djernesto1',
+  // },
 ];
